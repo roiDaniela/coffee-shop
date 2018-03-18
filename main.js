@@ -9,7 +9,38 @@ var coffeeShop = {
   },
 
   makeDrink: function (drinkType) {
-    // TODO: Finish this method
+    if(this.drinkRequirements.hasOwnProperty(drinkType)){
+      if(this.drinkRequirements[drinkType] <= this.beans){
+        alert("ok");
+        this.beans -= this.drinkRequirements[drinkType];
+      }
+      else{
+        alert("Sorry, we're all out of beans!");
+      }
+    }
+    else{
+      alert("Sorry, we don't make " + drinkType);
+    }
+
+    // if(this.drinkRequirements.keys)
+    // switch(drinkType){
+    //   case latte:{
+    //     break;
+    //   }
+    //   case americano:{
+    //     breark;
+    //   }
+    //   case doubleShot:{
+    //     break;
+    //   }
+    //   case frenchPress:{
+    //     break;
+    //   }
+    //   default:{
+    //     alert("Sorry, we don't make " + drinkType);
+    //     break;
+    //   }
+    //}
   }
 }
 
